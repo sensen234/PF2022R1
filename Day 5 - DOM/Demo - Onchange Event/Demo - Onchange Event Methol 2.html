@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Choose your plan</p>
+    <select id="wifiPlan">
+        <option value="plan_1">Plan 1 - 3200 per month</option>;
+        <option value="plan_2">Plan 2 - 4300 per month</option>;
+        <option value="plan_3">Plan 3 - 5400 per month</option>;
+    </select>
+</body>
+<script>
+    //khai bao bien 
+    var selectedPlan=document.getElementById("wifiPlan");
+    //thuc khi ham showChosePlan khi su kien onchange xay ra
+    selectedPlan.addEventListener("change", showChosePlan);
+
+    function showChosePlan(){
+        var wifiPlan = document.getElementById("wifiPlan").value;
+        alert("You chose " + wifiPlan);
+    };
+    
+
+</script>
+</html>

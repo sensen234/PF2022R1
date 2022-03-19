@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>Write your name in next textbox</h5>
+    <input id="userName" type="text"></input>
+    <button type="button" onclick="showUserName()">Click to show your name</button>
+</body>
+</html>
+<script>
+    function showUserName(){
+        let getUserInfo = document.getElementById("userName");
+        let userName = getUserInfo.value
+        document.write("Ten cua ban la " + userName)
+    }
+</script>
+</html>

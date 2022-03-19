@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="userClick" onclick="effect_when_clicked()">Click here</p>
+    <p id="userClick2">Continue click here</p>
+</body>
+<script>
+    function effect_when_clicked(){
+    document.getElementById("userClick").innerHTML = "You clicked on this row";
+    }
+    
+    var clicked2 = document.getElementById("userClick2");
+    clicked2.addEventListener("click",when_click_2);
+
+    function when_click_2(){
+         clicked2.innerHTML = "You clicked on this row 2"
+    }
+</script>
+</html>
