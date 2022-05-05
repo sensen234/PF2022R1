@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Form 2</title>
+    <style>
+        #form1 {
+            line-height: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;            
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1">
+        <table style="width: 50%; background-color: rgba(255, 248, 181, 0.945); padding: 3px;">
+            <tr style="background-color: aquamarine; color: rgb(0, 60, 255); font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 17px;">
+                <td colspan="4">ĐĂNG KÝ HỌC VIÊN</td>
+            </tr>            
+            <tr>
+                <td style="color: rgb(0, 0, 170);">Họ và tên</td>
+                <td colspan="3"><input type="text" name="fullname" size="30px"></td>
+            </tr>
+            <tr>
+                <td style="color: rgb(0, 0, 170);">Ngày sinh</td>
+                <td colspan="3"><input type="text" name="birthday" size="17px"></td>
+            </tr>
+            <tr>
+                <td style="color: rgb(0, 0, 170);">Giới tính</td>
+                <td colspan="2"><input type="radio" name="gender" value="Nam">Nam <input type="radio" name="gender"
+                        value="Nữ">Nữ</td>
+            </tr>
+            <tr>
+                <td style="color: rgb(0, 0, 170); vertical-align: top;">Địa chỉ</td>
+                <td colspan="3"><textarea rows="3" cols="25" name="address"></textarea></td>
+            </tr>
+            <tr>
+                <td style="color: rgb(0, 0, 170);">Lớp</td>
+                <td colspan="3">
+                    <select name="class">
+                        <option> - Chọp lớp -</option>
+                        <option value="classA">Lớp A</option>
+                        <option value="classB">Lớp B</option>
+                        <option value="classC">Lớp C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td style="color: rgb(0, 0, 170);">Email</td>
+                <td colspan="3"><input type="text" name="email" size="20px"></td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="color: rgb(0, 0, 170); vertical-align: top;">Điện thoại</td>
+                <td colspan="3"><input type="text" name="tel" size="20px"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" name="register" value="Đăng ký" style="width: 86px;">
+                    <input type="reset" name="reset" value="Nhập lại" style="width: 86px;">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
