@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Odd Even Number</title>
+</head>
+<body>
+    <h3>Input your number</h3>
+    <input id="number" type="number">
+    <button type="button" onclick="checkNumber()">Check</button>
+</body>
+<script>
+function checkNumber(){
+    let checkNumber = document.getElementById("number").value;
+    if(checkNumber%2==0){
+        alert(checkNumber + " is even number");
+    }
+    else
+    alert(checkNumber + " is odd number");
+}
+</script>
+</html>
