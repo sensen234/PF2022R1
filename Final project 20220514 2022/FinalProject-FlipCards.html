@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Cards</title>
+    <link rel="stylesheet" href="FlipCardStyles.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="main">
+            <div class="heading">
+                <h1>Flip Cards Game</h1>
+                <h3>Select a challenge on the right side and click any card to begin</h3>
+                <h3 class="time-display">
+                    <span class="min-display"></span>
+                    <span class="second-display"></span>
+                </h3>
+            </div>
+
+            <section class="cardContainer">
+                <div class="cardElements" data-id="img01">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image01.png" alt="Cover Img">
+                </div>
+                <div class="cardElements" data-id="img01">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image01.png" alt="Cover Img">
+                </div>
+                <div class="cardElements" data-id="img02">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image02.png" alt="Cover Img">
+                </div>
+                <div class="cardElements" data-id="img02">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image02.png" alt="Cover Img">
+                </div>
+                <div class="cardElements" data-id="img03">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image03.png" alt="Cover Img">
+                </div>
+                <div class="cardElements" data-id="img03">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image03.png" alt="Cover Img">
+                </div>
+                <div class="cardElements" data-id="img04">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image04.png" alt="Cover Img">
+                </div>
+                <div class="cardElements" data-id="img04">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image04.png" alt="Cover Img">
+                </div>
+                <div class="cardElements" data-id="img05">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image05.png" alt="Cover Img">
+                </div>
+                <div class="cardElements" data-id="img05">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image05.png" alt="Cover Img">
+                </div>
+                <div class="cardElements" data-id="img06">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image06.png" alt="Cover Img">
+                </div>
+                <div class="cardElements" data-id="img06">
+                    <img class="cover-img" src="Source Image/Cover.png" alt="Cover Img">
+                    <img class="flip-img" src="Source Image/Image06.png" alt="Cover Img">
+                </div>
+
+            </section>
+            <div class="result">
+                <div class="result-img">
+                    <img id="winLoseImg">
+                </div>
+                <div class="result-main">
+                    <h2 class="result-heading" id="msg"> </h2>
+                    <p class="result-content"> Do you wanna play again? </p>
+                    <div class="btn-group">
+                        <button class="endGameBtn" onclick="playgame()">Play again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="support">
+            <div class="rules selectTime">
+                <div class="selectTime-heading">
+                    <h2>Select A Challenge</h2>
+                </div>
+                <div class="selectTime-group">
+                    <button class="btn time-btn" onclick="backTime(120)">120 seconds</button>
+                    <button class="btn time-btn" onclick="backTime(90)">90 seconds</button>
+                    <button class="btn time-btn" onclick="backTime(60)">60 seconds</button>
+                    <button class="btn time-btn" onclick="backTime(30)">30 seconds</button>
+                </div>
+            </div>
+            <section class="rules">
+                <h3 style="text-align: center"> Rules</h3>
+                <div> First, the player chooses a card and click on it, then selects another card and turns it over.
+                </div>
+                <br>
+                <div> If the two cards are a matching pair, they will be removed from the board. If the cards are not a
+                    match
+                    they are turned back over</div>
+                <br>
+                <div> When all cards are removed from board, game ends and player win the game.</div>
+                <br>
+                <div style="color: red;"> *Do you know what costume is in the background? </div>
+            </section>
+        </div>     
+
+    </div>
+    <script src="flipScripts.js"></script>
+</body>
+
+</html>
