@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            flex-direction: column;
+            min-height: 350px;
+            width: 400px;
+            margin: 0 auto;
+            background-color: rgb(183, 202, 112);
+        }
+
+        .text {
+            color: #fff;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-option,
+        .input-form {
+            margin-left: 10px;
+            font-size: 16px;
+            padding-left: 5px;
+            outline: 0;
+        }
+
+        .btn {
+            padding: 5px 18px;
+            font-size: 17px;
+            text-transform: uppercase;
+            background-color: rgb(150, 124, 184);
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main" class="row">
+        <h1 class="text">Tính điểm ĐH khối D</h1>
+        <div class="row">
+            <p class="text">Môn Toán</p>
+            <input type="number" class="input-form">
+        </div>
+        <div class="row">
+            <p class="text">Môn Văn</p>
+            <input type="number" class="input-form">
+        </div>
+        <div class="row">
+            <p class="text">Môn Anh</p>
+            <input type="number" class="input-form">
+        </div>
+        <div class="row">
+            <p class="text">Khu vực</p>
+            <select class="input-option">
+                <option class="option-form" value="0.75">KV1</option>
+                <option class="option-form" value="0.5">KV2</option>
+                <option class="option-form" value="0.25">KV2-NT</option>
+                <option class="option-form" value="0">KV3</option>
+            </select>
+        </div>
+        <button class="btn">tổng</button>
+    </div>
+
+
+    <script>
+        var inputForms = document.querySelectorAll('.input-form');
+        var btn = document.querySelector('.btn');
+        var total;
+
+        btn.onclick = function () {
+            var total = Number(document.querySelector('.input-option').value);
+            for (var i = 0; i < inputForms.length; i++) {
+                total += parseInt(inputForms[i].value);
+            }
+            console.log(total)
+        }
+
+    </script>
+</body>
+
+</html>
