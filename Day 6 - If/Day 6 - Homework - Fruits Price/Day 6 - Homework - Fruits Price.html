@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #item-price {
+            min-height: 300px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(194, 181, 111);
+        }
+
+        .text {
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .item-input {
+            margin-bottom: 15px;
+            font-size: 20px;
+            border: 0;
+            padding: 5px 10px;
+        }
+
+        .item-button {
+            font-size: 16px;
+            padding: 5px 15px;
+        }
+
+        .price-output {
+            height: 40px;
+            width: 83%;
+            background-color: rgb(80, 61, 124);
+            padding: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="item-price">
+        <h1 class="text">Fruits Price</h1>
+        <input type="text" class="item-input" onkeyup="inputValue()">
+        <button class="item-button">Check Price</button>
+        <h1 class="text price-output"></h1>
+
+    </div>
+
+    <script>
+
+        var itemInput;
+        function inputValue() {
+            itemInput = document.querySelector('.item-input').value.toLowerCase();
+        }
+        var result;
+        var itemInput = document.querySelector('.item-input');
+        var itemButton = document.querySelector('.item-button');
+        var priceOutput = document.querySelector('.price-output')
+        itemButton.onclick = function () {
+            switch (true) {
+                case (itemInput == 'ổi' || itemInput == 'oi'):
+                case (itemInput == 'dưa hấu' || itemInput == 'dua hau'):
+                    priceOutput.innerHTML = '20,000VND'
+                    break;
+                case (itemInput == 'táo' || itemInput == 'tao'):
+                case (itemInput == 'xoài' || itemInput == 'xoai'):
+                    priceOutput.innerHTML = '30,000VND'
+                    break;
+                case (itemInput == 'cam'):
+                case (itemInput == 'chôm chôm' || itemInput == 'chom chom'):
+                    priceOutput.innerHTML = '40,000VND'
+                    break;
+                case (itemInput == 'măng cụt' || itemInput == 'mang cut'):
+                    priceOutput.innerHTML = '50,000VND'
+                    break;
+                default:
+                    priceOutput.innerHTML = 'Input Again'
+            }
+        }
+    </script>
+</body>
+
+</html>
