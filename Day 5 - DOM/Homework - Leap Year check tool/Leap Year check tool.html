@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .check-year {
+            width: 300px;
+            height: 230px;
+            background-color: rgba(0, 0, 0, 0.041);
+            margin: 0 auto;
+        }
+        .check-infor{
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text{
+            color: rgb(58, 64, 143);
+            text-transform: uppercase;
+        }
+
+        .yearinput{
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .result{
+            color: rgb(80, 64, 139);
+            font-size: 25px;
+        }
+    </style>
+
+    <div class="check-year">
+        <div class="check-infor">
+            <h1 class="text">Input Year</h1>
+            <input type="number" class="yearinput" placeholder="Input the Year">
+            <button class="check">Check</button>
+            <p class="result"></p>
+        </div>
+    </div>
+
+
+    <script>
+        var yearInput = document.querySelector('.yearinput');
+        var yearInputValue;
+        var checkBtn = document.querySelector('.check');
+        var resultOutput = document.querySelector('.result')
+        var outPut;
+        yearInput.addEventListener('change', function () {
+            yearInputValue = parseInt(yearInput.value);
+        })
+        checkBtn.onclick = function () {
+            if (yearInputValue % 4 == 0) {
+                if (yearInputValue % 100 !== 0) {
+                    outPut = yearInputValue + ' is Leap year'
+                } else if (yearInputValue % 400 == 0) {
+                    outPut = yearInputValue + ' is Leap year'
+
+                } else {
+                    outPut = yearInputValue + ' is not Leap year'
+                }
+            } else {
+                outPut = yearInputValue + ' is not Leap year'
+            }
+            resultOutput.innerHTML = outPut
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
